@@ -1,2 +1,16 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<table>
+	<tr>
+	<td>DP</td>
+	<td>Name</td>
+	<td>Email</td>
+	</tr>
+	
+	<% @user.each do |p|%>
+	<tr>
+		<td><%= image_tag p.image.photo(:thumb) if !p.image.blank?%></td>
+		<td><%= p.name%></td>
+		<td><%= p.email%></td>
+	</tr>
+		<%end%>
+	
+</table>

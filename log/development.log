@@ -1223,3 +1223,574 @@ Processing by UsersController#create as HTML
   Rendered users/_error_message.html.erb (2.4ms)
   Rendered users/new.html.erb within layouts/application (6.9ms)
 Completed 200 OK in 73ms (Views: 46.9ms | ActiveRecord: 0.5ms)
+  [1m[36mImage Load (0.9ms)[0m  [1mSELECT  "images".* FROM "images"  ORDER BY "images"."id" DESC LIMIT 1[0m
+SQLite3::SQLException: no such table: images: SELECT  "images".* FROM "images"  ORDER BY "images"."id" DESC LIMIT 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateImages (20150808061824)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150808061824"]]
+  [1m[36m (133.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddAttachmentPhotoToImages (20150808061943)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "images" ADD "photo_file_name" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "images" ADD "photo_content_type" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "images" ADD "photo_file_size" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "images" ADD "photo_updated_at" datetime
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150808061943"]]
+  [1m[35m (116.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT  "images".* FROM "images"  ORDER BY "images"."id" DESC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-08 11:54:33 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 41ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users//new" for 127.0.0.1 at 2015-08-08 11:54:42 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (3.3ms)
+  Rendered users/new.html.erb within layouts/application (66.1ms)
+Completed 200 OK in 462ms (Views: 449.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-08 11:54:43 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-08 11:54:43 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-08 11:54:43 +0530
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-08 11:54:43 +0530
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-08 11:54:43 +0530
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-08 11:54:43 +0530
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-08 11:54:43 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-08 11:54:43 +0530
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-08 11:54:45 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login_page" for 127.0.0.1 at 2015-08-08 11:54:59 +0530
+Processing by UsersController#login_page as HTML
+  Rendered users/login_page.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login_page" for 127.0.0.1 at 2015-08-08 11:55:01 +0530
+Processing by UsersController#login_page as HTML
+  Rendered users/login_page.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login_page" for 127.0.0.1 at 2015-08-08 11:55:03 +0530
+Processing by UsersController#login_page as HTML
+  Rendered users/login_page.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-08 11:55:44 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddColumnToImage (20150808062935)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "images" ADD "user_id" integer[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_images_on_user_id" ON "images" ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150808062935"]]
+  [1m[36m (124.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_images_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_images_on_user_id' AND type='index'
+[0m
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT  "images".* FROM "images"  ORDER BY "images"."id" DESC LIMIT 1[0m
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-08 12:04:51 +0530
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 49ms (Views: 37.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-08 12:04:51 +0530
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-08 12:04:51 +0530
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-08 12:04:51 +0530
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-08 12:04:51 +0530
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-08 12:04:51 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-08 12:04:51 +0530
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-08 12:04:51 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-08 12:04:51 +0530
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-08 12:05:32 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-08 12:05:32 +0530
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-08 12:05:32 +0530
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-08 12:05:32 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-08 12:05:32 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-08 12:05:32 +0530
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-08 12:05:32 +0530
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-08 12:05:32 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-08 12:05:32 +0530
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-08 12:08:08 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 54ms (Views: 44.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-08 12:08:08 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-08 12:08:08 +0530
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-08 12:08:08 +0530
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-08 12:08:08 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-08 12:08:08 +0530
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-08 12:08:08 +0530
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-08 12:08:08 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-08 12:08:08 +0530
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-08 12:08:10 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-08 12:08:10 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-08 12:08:10 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-08 12:08:10 +0530
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-08 12:08:10 +0530
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-08 12:08:10 +0530
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-08 12:08:10 +0530
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-08 12:08:10 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-08 12:08:10 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-08 12:10:00 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DCs51IddA4dIxyfYjqSYN+xAOaKGdXC0L0/Kfx6Bu7R7ienUVkq/4gsgrJ99o82Olx1LDcAQfnVb/6VrqGwKlw==", "user"=>{"name"=>"Akshay", "email"=>"ab@gmail.com", "password"=>"[FILTERED]", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fd1bd605360 @tempfile=#<Tempfile:/tmp/RackMultipart20150808-6813-1byr0zj.jpg>, @original_filename="Untitled-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"Untitled-1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'photo' for User.):
+  app/controllers/users_controller.rb:9:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.6ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007fd1ce118828 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007fd1ce118558 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007fd1ce11f0b0 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-08 12:18:14 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-08 12:18:50 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 112ms (Views: 40.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-08 12:19:46 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SHXpIth5IJh7S2CVxPGInhLU/VkTtvWKZO/dZFAedDs/1zkiCW6c/Tis69I39t0naYmP9lXT+0sQX7Jw5vPFGA==", "user"=>{"name"=>"Akshay", "email"=>"acc@gmail.com", "password"=>"[FILTERED]", "image"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x007fd1bd975180 @tempfile=#<Tempfile:/tmp/RackMultipart20150808-6813-1026zal.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[image][photo]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">}}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.7ms)
+
+ActiveRecord::AssociationTypeMismatch (Image(#70269401741380) expected, got ActionController::Parameters(#70269523738820)):
+  app/controllers/users_controller.rb:10:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.3ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007fd1ce118828 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007fd1ce118558 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007fd1ce11f0b0 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-08 12:20:16 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SHXpIth5IJh7S2CVxPGInhLU/VkTtvWKZO/dZFAedDs/1zkiCW6c/Tis69I39t0naYmP9lXT+0sQX7Jw5vPFGA==", "user"=>{"name"=>"Akshay", "email"=>"acc@gmail.com", "password"=>"[FILTERED]", "image"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x007fd1bd9b95b0 @tempfile=#<Tempfile:/tmp/RackMultipart20150808-6813-1i737bj.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[image][photo]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">}}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::AssociationTypeMismatch (Image(#70269401741380) expected, got ActionController::Parameters(#70269523738820)):
+  app/controllers/users_controller.rb:10:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.7ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007fd1ce118828 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007fd1ce118558 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007fd1ce11f0b0 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-08 12:20:37 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SHXpIth5IJh7S2CVxPGInhLU/VkTtvWKZO/dZFAedDs/1zkiCW6c/Tis69I39t0naYmP9lXT+0sQX7Jw5vPFGA==", "user"=>{"name"=>"Akshay", "email"=>"acc@gmail.com", "password"=>"[FILTERED]", "image"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x007fd1a80326f0 @tempfile=#<Tempfile:/tmp/RackMultipart20150808-6813-av5cwn.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[image][photo]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">}}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 48969ms (ActiveRecord: 1.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:11:in `exit'
+  app/controllers/users_controller.rb:11:in `create'
+  app/controllers/users_controller.rb:11:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (200.5ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (52.1ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.6ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (299.6ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007fd1ce118828 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007fd1ce118558 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007fd1ce11f0b0 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-08 12:21:45 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SHXpIth5IJh7S2CVxPGInhLU/VkTtvWKZO/dZFAedDs/1zkiCW6c/Tis69I39t0naYmP9lXT+0sQX7Jw5vPFGA==", "user"=>{"name"=>"Akshay", "email"=>"acc@gmail.com", "password"=>"[FILTERED]", "image"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x007fb3c1168448 @tempfile=#<Tempfile:/tmp/RackMultipart20150808-7423-18h4djb.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[image][photo]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">}}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.6ms)
+
+ActiveRecord::AssociationTypeMismatch (Image(#70205007335000) expected, got ActionController::Parameters(#70204989935460)):
+  app/controllers/users_controller.rb:10:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.1ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007fb3c10b2990 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007fb3c10b26c0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007fb3c04e2340 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-08 12:22:24 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SHXpIth5IJh7S2CVxPGInhLU/VkTtvWKZO/dZFAedDs/1zkiCW6c/Tis69I39t0naYmP9lXT+0sQX7Jw5vPFGA==", "user"=>{"name"=>"Akshay", "email"=>"acc@gmail.com", "password"=>"[FILTERED]", "image"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x007fb3c15dfad0 @tempfile=#<Tempfile:/tmp/RackMultipart20150808-7423-1cuqtf8.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[image][photo]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">}}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::AssociationTypeMismatch (Image(#70205007335000) expected, got ActionController::Parameters(#70204989935460)):
+  app/controllers/users_controller.rb:10:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.9ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007fb3c10b2990 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007fb3c10b26c0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007fb3c04e2340 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-08 12:22:30 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (3.4ms)
+  Rendered users/new.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 360ms (Views: 343.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-08 12:22:41 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKa2fWFC+YxQQdeLJnPHTlTeSeA6N5GvCeN81qSDA6gvBGZ9sFVF6ROmXMzVdJL3L4M7T3xSn259UxPCEm6yiw==", "user"=>{"name"=>"dsfsDF", "email"=>"dsfadsed", "password"=>"[FILTERED]", "image_attributes"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x007fb3adcf25e8 @tempfile=#<Tempfile:/tmp/RackMultipart20150808-7423-194ddwt.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[image_attributes][photo]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">}}, "commit"=>"Create User"}
+Command :: file -b --mime '/tmp/2d2c1e99927200267c7f645c1490e74620150808-7423-owzcb1.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2d2c1e99927200267c7f645c1490e74620150808-7423-1v2bk60.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2d2c1e99927200267c7f645c1490e74620150808-7423-1v2bk60.png[0]'
+Command :: convert '/tmp/2d2c1e99927200267c7f645c1490e74620150808-7423-1v2bk60.png[0]' -auto-orient -resize "300x300>" '/tmp/f91789284cb39b683027b6d3151f5e4320150808-7423-1vncp5g'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2d2c1e99927200267c7f645c1490e74620150808-7423-1v2bk60.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2d2c1e99927200267c7f645c1490e74620150808-7423-1v2bk60.png[0]'
+Command :: convert '/tmp/2d2c1e99927200267c7f645c1490e74620150808-7423-1v2bk60.png[0]' -auto-orient -resize "100x100>" '/tmp/f91789284cb39b683027b6d3151f5e4320150808-7423-pji84w'
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'dsfadsed' LIMIT 1[0m
+Command :: file -b --mime '/tmp/2d2c1e99927200267c7f645c1490e74620150808-7423-1h4azbs.png'
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "dsfsDF"], ["email", "dsfadsed"], ["password", "afewrwe"], ["created_at", "2015-08-08 06:52:41.834980"], ["updated_at", "2015-08-08 06:52:41.834980"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "images" ("photo_file_name", "photo_content_type", "photo_file_size", "photo_updated_at", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["photo_file_name", "10501835_737529199621691_5974029468167277643_n.png"], ["photo_content_type", "image/png"], ["photo_file_size", 281225], ["photo_updated_at", "2015-08-08 06:52:41.513007"], ["user_id", 5], ["created_at", "2015-08-08 06:52:41.838553"], ["updated_at", "2015-08-08 06:52:41.838553"]]
+  [1m[35m (149.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/users
+Completed 302 Found in 508ms (ActiveRecord: 151.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-08 12:22:42 +0530
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-08 12:22:57 +0530
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mImage Load (0.4ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 5]]
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-08 12:25:10 +0530
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (undefined method `each' for #<User:0x007fb3c124fde8>):
+     5: 	<td>Email</td>
+     6: 	</tr>
+     7: 	
+     8: 	<% @user.each do |p|%>
+     9: 	<tr>
+    10: 		<td><%= image_tag p.photo%></td>
+    11: 		<td><%= p.name%></td>
+  app/views/users/index.html.erb:8:in `_app_views_users_index_html_erb___4095052674339244304_70205010559520'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (28.2ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (68.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-08 12:25:25 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (undefined method `photo' for #<User:0x007fb3ae053480>):
+     7: 	
+     8: 	<% @user.each do |p|%>
+     9: 	<tr>
+    10: 		<td><%= image_tag p.photo%></td>
+    11: 		<td><%= p.name%></td>
+    12: 		<td><%= p.email%></td>
+    13: 	</tr>
+  app/views/users/index.html.erb:10:in `block in _app_views_users_index_html_erb___4095052674339244304_70205010559520'
+  app/views/users/index.html.erb:8:in `_app_views_users_index_html_erb___4095052674339244304_70205010559520'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (24.5ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (49.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-08 12:26:08 +0530
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 2]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 4]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 82ms (Views: 79.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-08 12:26:16 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 54ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-08 12:26:46 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DAUBrPPWk4M/FaazaTObB60AU9YCVPCUc4nYjE6yhS57p9GsIsEv5nzyLfSaNM6+1l0heUQx/lUHObeY+F80DQ==", "user"=>{"name"=>"vishnu", "email"=>"vish@vish.com", "password"=>"[FILTERED]", "image_attributes"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x007fb3ad935680 @tempfile=#<Tempfile:/tmp/RackMultipart20150808-7423-1fbqerc.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image_attributes][photo]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">}}, "commit"=>"Create User"}
+Command :: file -b --mime '/tmp/95a79089bdea948896047848c27cf22320150808-7423-40vke3.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/95a79089bdea948896047848c27cf22320150808-7423-2rp4ya.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/95a79089bdea948896047848c27cf22320150808-7423-2rp4ya.jpg[0]'
+Command :: convert '/tmp/95a79089bdea948896047848c27cf22320150808-7423-2rp4ya.jpg[0]' -auto-orient -resize "300x300>" '/tmp/7d2177237acace3376c148b1206f144a20150808-7423-1arhiy7'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/95a79089bdea948896047848c27cf22320150808-7423-2rp4ya.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/95a79089bdea948896047848c27cf22320150808-7423-2rp4ya.jpg[0]'
+Command :: convert '/tmp/95a79089bdea948896047848c27cf22320150808-7423-2rp4ya.jpg[0]' -auto-orient -resize "100x100>" '/tmp/7d2177237acace3376c148b1206f144a20150808-7423-hm3mg0'
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'vish@vish.com' LIMIT 1[0m
+Command :: file -b --mime '/tmp/95a79089bdea948896047848c27cf22320150808-7423-hbij2f.jpg'
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "vishnu"], ["email", "vish@vish.com"], ["password", "8904040503"], ["created_at", "2015-08-08 06:56:46.533838"], ["updated_at", "2015-08-08 06:56:46.533838"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "images" ("photo_file_name", "photo_content_type", "photo_file_size", "photo_updated_at", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["photo_file_name", "i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg"], ["photo_content_type", "image/jpeg"], ["photo_file_size", 156034], ["photo_updated_at", "2015-08-08 06:56:46.330182"], ["user_id", 6], ["created_at", "2015-08-08 06:56:46.536251"], ["updated_at", "2015-08-08 06:56:46.536251"]]
+  [1m[35m (131.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users
+Completed 302 Found in 371ms (ActiveRecord: 132.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-08 12:26:46 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 5]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 6]]
+  Rendered users/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-08 12:27:38 +0530
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 2]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 4]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 5]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 6]]
+  Rendered users/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-08 12:27:57 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 5]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 6]]
+  Rendered users/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-08 12:27:57 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-08 12:27:57 +0530
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-08 12:27:57 +0530
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-08 12:27:57 +0530
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-08 12:27:57 +0530
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-08 12:27:57 +0530
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-08 12:27:57 +0530
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-08 12:27:57 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-08 12:33:59 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-08 12:34:30 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 67ms (Views: 43.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-08 12:46:55 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (47.6ms)
+  Rendered users/new.html.erb within layouts/application (415.8ms)
+Completed 200 OK in 2833ms (Views: 2417.9ms | ActiveRecord: 1.1ms)

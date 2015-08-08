@@ -14,6 +14,12 @@
 <td><%= f.password_field :password%></td>
 </tr>
 <tr>
+<%= f.fields_for "image" do |ff|%>
+<td><%= ff.label :photo, "DP"%></td>
+<td><%= ff.file_field :photo%></td>
+<%end%>
+</tr>
+<tr>
 	<td><%= f.submit%></td>	
 </tr>
 <%end%>
