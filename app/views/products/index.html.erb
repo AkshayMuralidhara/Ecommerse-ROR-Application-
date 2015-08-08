@@ -1,0 +1,17 @@
+<table>
+	<tr>
+	<td>Name</td>
+	<td>Brand</td>
+	<td>Price</td>
+	</tr>
+	
+	<% @product.each do |p|%>
+	<tr>
+		<td><%= p.name%></td>
+		<td><%= p.brand_name%></td>
+		<td><%= p.price%></td>
+	</tr>
+		<%end%>
+	
+</table>
+<%= link_to "Add Products", :controller=>"products", :action=>"new"%>

@@ -1,0 +1,18 @@
+<table>
+<%= form_for @product do |f| %>
+<tr>
+<td><%= f.label :name%></td>
+<td><%= f.text_field :name%></td>
+</tr>
+<tr>
+<td><%= f.label :brand_name%></td>
+<td><%= f.text_field :brand_name%></td>
+</tr>
+<tr>
+<td><%= f.label :price%></td>
+<td><%= f.text_field :price%></td>
+</tr>
+<tr>
+	<td><%= f.submit%></td>	
+</tr>
+<%end%>
