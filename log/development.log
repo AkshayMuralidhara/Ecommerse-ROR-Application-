@@ -3601,3 +3601,16 @@ Processing by ProductsController#index as HTML
   [1m[36mImage Load (0.7ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 12], ["entity_type", "Product"]]
   Rendered products/index.html.erb within layouts/application (246.4ms)
 Completed 200 OK in 1924ms (Views: 1910.3ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/users/destroy_session" for 127.0.0.1 at 2015-08-09 09:30:23 +0530
+Processing by UsersController#destroy_session as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-09 09:30:23 +0530
+Processing by UsersController#login_page as HTML
+  Rendered users/_error_message.html.erb (3.3ms)
+  Rendered users/login_page.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 1373ms (Views: 1317.7ms | ActiveRecord: 1.8ms)
