@@ -2564,3 +2564,281 @@ Processing by UsersController#index as HTML
   [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 6]]
   Rendered users/index.html.erb within layouts/application (8.9ms)
 Completed 200 OK in 137ms (Views: 135.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/destroy_session" for 127.0.0.1 at 2015-08-09 08:25:15 +0530
+Processing by UsersController#destroy_session as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-09 08:25:15 +0530
+Processing by UsersController#login_page as HTML
+  Rendered users/_error_message.html.erb (0.0ms)
+  Rendered users/login_page.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 145ms (Views: 143.9ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/users/allow_login" for 127.0.0.1 at 2015-08-09 08:25:55 +0530
+Processing by UsersController#allow_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qEHuSf1pt5DcIJZCmjX+Se/KFYmDBkPIZD9XYplnJuWu1FL/1Lj9gi8Hnf++N4+C7Ivcejz/glrZWQ7JYO5KLg==", "user"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ?  [["email", "a@gmail.com"], ["password", "Sw0rdf!sh"]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-09 08:25:55 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 5]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 6]]
+  Rendered users/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 156ms (Views: 154.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/destroy_session" for 127.0.0.1 at 2015-08-09 08:25:57 +0530
+Processing by UsersController#destroy_session as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-09 08:25:57 +0530
+Processing by UsersController#login_page as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/login_page.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 162ms (Views: 160.7ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/users/allow_login" for 127.0.0.1 at 2015-08-09 08:25:59 +0530
+Processing by UsersController#allow_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TqLvMq29+6LKbxW2Rm8/EJpzNqT6whiDzSyrdp/gJ5dIN1OEhGyxsDlIHgtibU7bmTL/V0U72RFwSvLdZmlLXA==", "user"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ?  [["email", "a@gmail.com"], ["password", "Sw0rdf!sh"]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-09 08:25:59 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 5]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 6]]
+  Rendered users/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 153ms (Views: 150.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/destroy_session" for 127.0.0.1 at 2015-08-09 08:26:00 +0530
+Processing by UsersController#destroy_session as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-09 08:26:00 +0530
+Processing by UsersController#login_page as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/login_page.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 148ms (Views: 146.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-09 08:26:01 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 120ms (Views: 118.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-09 08:26:07 +0530
+Processing by UsersController#login_page as HTML
+  Rendered users/_error_message.html.erb (0.0ms)
+  Rendered users/login_page.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 130ms (Views: 128.9ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/users/allow_login" for 127.0.0.1 at 2015-08-09 08:26:10 +0530
+Processing by UsersController#allow_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2NyKDq3CIXJMPAjMELN6U2KZ1I3E3JBSU7sd3W+pNzveSTa4hBNrYL8bA3E0sQuYYdgdfnslUcDu3UR2liBb8A==", "user"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ?  [["email", "a@gmail.com"], ["password", "Sw0rdf!sh"]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-09 08:26:10 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 5]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 6]]
+  Rendered users/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 120ms (Views: 118.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+Processing by UsersController#login_page as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/login_page.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 111ms (Views: 110.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-4decdb6ffdafd4aace1dab599a3d956c9e0ea69b2df94c6b59d0b9f0b02ec68d.css?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/vendor/modernizr.self-74da3245def7569da28115667be6a85a2ad97464abe707c9829c46d8975597bc.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/application.self-167193cd81d9330d9ddb5c4ec7b44214fea529aa8a94f3a86e6526e4f652fc02.css?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/assets/application.self-79a300d240bbf145c9af961805bc87f18e9f73bd1cda275895295c80d8552d3f.js?body=1" for 127.0.0.1 at 2015-08-09 08:26:41 +0530
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-09 08:29:10 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" LIMIT 5 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (76.8ms)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 2.7ms)
+
+ActionView::Template::Error (The @users variable appears to be empty. Did you forget to pass the collection object for will_paginate?):
+    14: 		<%end%>
+    15: 	
+    16: </table>
+    17: <%= will_paginate @posts %>
+  app/views/users/index.html.erb:17:in `_app_views_users_index_html_erb___3184991732042334777_69986256745840'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.8ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (28.6ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.5ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.3ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (57.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-09 08:29:23 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 2]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 4]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 443ms (Views: 441.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2015-08-09 08:29:29 +0530
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" LIMIT 5 OFFSET 5
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 6]]
+  Rendered users/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 242ms (Views: 240.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users?page=1" for 127.0.0.1 at 2015-08-09 08:29:32 +0530
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" LIMIT 5 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 156ms (Views: 154.2ms | ActiveRecord: 0.7ms)

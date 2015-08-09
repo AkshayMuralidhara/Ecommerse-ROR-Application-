@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 skip_before_action :require_login, :only => [:new, :create, :login_page, :allow_login ]
   def index
-    @user=User.all
+    @user=User.paginate(:page => params[:page], :per_page => 5)
   end
 
   def new
