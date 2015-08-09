@@ -1,5 +1,6 @@
 <table>
 	<tr>
+	<td>Product Image</td>
 	<td>Name</td>
 	<td>Brand</td>
 	<td>Price</td>
@@ -7,6 +8,17 @@
 	
 	<% @product.each do |p|%>
 	<tr>
+	<% if not p.images.blank?%>
+<% t=0%>
+<% p.images.each do |m|%>
+<% t=t+1%>
+<% if t ==1 %>
+<td><%= image_tag m.photo(:medium)%></td>
+<%else%>
+<td><%= image_tag m.photo(:thumb)%></td>
+<%end%>
+<%end%>
+	<%end%>
 		<td><%= p.name%></td>
 		<td><%= p.brand_name%></td>
 		<td><%= p.price%></td>

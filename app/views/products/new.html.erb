@@ -13,6 +13,12 @@
 <td><%= f.text_field :price%></td>
 </tr>
 <tr>
+<%= f.fields_for "image" do |ff|%>
+<td><%= ff.label :photo, "DP"%></td>
+<td><%= ff.file_field :photo, :multiple => true%></td>
+<%end%>
+</tr>
+<tr>
 	<td><%= f.submit%></td>	
 </tr>
 <%end%>

@@ -2842,3 +2842,762 @@ Processing by UsersController#index as HTML
   [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 5]]
   Rendered users/index.html.erb within layouts/application (7.9ms)
 Completed 200 OK in 156ms (Views: 154.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-09 08:30:41 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (3.7ms)
+  Rendered users/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 145ms (Views: 142.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-09 08:35:01 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (23.7ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `multiple' for #<#<Class:0x007f4de4285ad0>:0x007f4dd62ab220>):
+    16: <tr>
+    17: <%= fields_for "image" do |ff|%>
+    18: <td><%= ff.label :photo, "DP"%></td>
+    19: <td><%= ff.file_field :photo, multiple=>true%></td>
+    20: <%end%>
+    21: </tr>
+    22: <tr>
+  app/views/users/new.html.erb:19:in `block (2 levels) in _app_views_users_new_html_erb___115375598890893964_69986141162840'
+  app/views/users/new.html.erb:17:in `block in _app_views_users_new_html_erb___115375598890893964_69986141162840'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb___115375598890893964_69986141162840'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.8ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.1ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (25.5ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (51.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-09 08:35:21 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 144ms (Views: 142.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-09 08:35:47 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ocADB9FtoN/JY05Jl3IeTxRXr9ZjPCMuNUq+xCENTO6nVb+x+LzqzTpERfSzcG+EFxZmJdzF4ryILOdv2IQgJQ==", "user"=>{"name"=>"", "email"=>"a@gmail.com", "password"=>"[FILTERED]"}, "image"=>{"photo"=>["10501835_737529199621691_5974029468167277643_n.png", "i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg"]}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 66317ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:13:in `exit'
+  app/controllers/users_controller.rb:13:in `create'
+  app/controllers/users_controller.rb:13:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (184.8ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (55.6ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.6ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (288.8ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.1ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (3.6ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.8ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (76.2ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (3.0ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (138.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-09 08:36:57 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 1738ms (Views: 1593.9ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-09 08:37:07 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JMZlwUYECDLfuxooPHj6qQdWeejm91EE+3oQeh5BTdUiU9l3b9VCICycEZUYeotiBBewG1kOkJZGHEnR58ghHg==", "user"=>{"name"=>"", "email"=>"a@gmail.com", "password"=>"[FILTERED]", "photo"=>[#<ActionDispatch::Http::UploadedFile:0x007f4de65783a8 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-6102-1fxh6yf.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f4de656fe60 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-6102-k6cve7.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:13:in `exit'
+  app/controllers/users_controller.rb:13:in `create'
+  app/controllers/users_controller.rb:13:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (279.8ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (87.2ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (23.0ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (446.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f4de54517c8 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f4de5451188 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f4de6899668 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-09 08:37:24 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (3.7ms)
+  Rendered users/new.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 631ms (Views: 573.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-09 08:37:34 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U61XhSDmwZOje8qhPMrMTEqIL2xw19B6zHHWkLRZQy1VOOszCTeLgVBcwRwYyL2HScnmn88uEehxF487TdAv5g==", "user"=>{"name"=>"", "email"=>"a@gmail.com", "password"=>"[FILTERED]", "photo"=>[#<ActionDispatch::Http::UploadedFile:0x007f77224f2360 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-6458-1jcilwb.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f77224f22e8 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-6458-1sejzgy.jpeg>, @original_filename="IMG_154387006730197.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo][]\"; filename=\"IMG_154387006730197.jpeg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 283578ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:13:in `exit'
+  app/controllers/users_controller.rb:13:in `create'
+  app/controllers/users_controller.rb:13:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (249.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (76.0ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (385.1ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f773222d890 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f773222d5c0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f7732237d40 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-09 08:42:44 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U61XhSDmwZOje8qhPMrMTEqIL2xw19B6zHHWkLRZQy1VOOszCTeLgVBcwRwYyL2HScnmn88uEehxF487TdAv5g==", "user"=>{"name"=>"", "email"=>"a@gmail.com", "password"=>"[FILTERED]", "photo"=>[#<ActionDispatch::Http::UploadedFile:0x007f9197cd69c0 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-6586-1a1kamv.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f9197cd67e0 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-6586-ona6gw.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.5ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/users_controller.rb:12:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.9ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f9199208078 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f9197dcee90 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f9199219da0 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-09 08:43:20 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U61XhSDmwZOje8qhPMrMTEqIL2xw19B6zHHWkLRZQy1VOOszCTeLgVBcwRwYyL2HScnmn88uEehxF487TdAv5g==", "user"=>{"name"=>"", "email"=>"a@gmail.com", "password"=>"[FILTERED]", "photo"=>[#<ActionDispatch::Http::UploadedFile:0x007f9198ec6338 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-6586-1snfe76.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f9198ec78a0 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-6586-6zopy1.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 97224ms (ActiveRecord: 10.9ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/users_controller.rb:13:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (229.8ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (74.1ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.2ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (377.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f9199208078 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f9197dcee90 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f9199219da0 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-09 08:46:58 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U61XhSDmwZOje8qhPMrMTEqIL2xw19B6zHHWkLRZQy1VOOszCTeLgVBcwRwYyL2HScnmn88uEehxF487TdAv5g==", "user"=>{"name"=>"", "email"=>"a@gmail.com", "password"=>"[FILTERED]", "photo"=>[#<ActionDispatch::Http::UploadedFile:0x007f919932e290 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-6586-cw0igq.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f9199322c38 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-6586-nhwri3.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 14552ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:13:in `exit'
+  app/controllers/users_controller.rb:13:in `create'
+  app/controllers/users_controller.rb:13:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (333.8ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (71.3ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.1ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (478.5ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f9199208078 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f9197dcee90 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f9199219da0 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-09 08:47:25 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (4.4ms)
+  Rendered users/new.html.erb within layouts/application (70.6ms)
+Completed 200 OK in 759ms (Views: 685.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-09 08:47:32 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l+psdS5PxTYaf4Tdz9DIz7YM5j4A+Ov7T6UbE7JNBw6Rf9DDB56PJOlYj2Dr0rkEtU0vzb8BKmnyw0K4S8RrxQ==", "user"=>{"name"=>"", "email"=>"a@gmail.com", "password"=>"[FILTERED]", "photo"=>[#<ActionDispatch::Http::UploadedFile:0x007ff3d2117dd0 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-6728-1o1ug27.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007ff3d2117d58 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-6728-ldl7na.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 185272ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:13:in `exit'
+  app/controllers/users_controller.rb:13:in `create'
+  app/controllers/users_controller.rb:13:in `create'
+
+
+
+
+Started GET "/users/destroy_session" for 127.0.0.1 at 2015-08-09 08:50:44 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#destroy_session as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-09 08:50:44 +0530
+Processing by UsersController#login_page as HTML
+  Rendered users/_error_message.html.erb (4.0ms)
+  Rendered users/login_page.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 667ms (Views: 647.0ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/users/allow_login" for 127.0.0.1 at 2015-08-09 08:50:47 +0530
+Processing by UsersController#allow_login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T8HvyWOlFNL9Hhgai/dVtB8IP5g7NSfuvffD3q1B9EJJVFN/SnRewA45E6ev9SR/HEn2a4TM5nwAkZp1VMiYiQ==", "user"=>{"email"=>"a@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ?  [["email", "a@gmail.com"], ["password", "Sw0rdf!sh"]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-09 08:50:47 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 2]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 4]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (98.2ms)
+Completed 200 OK in 293ms (Views: 290.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-08-09 08:50:54 +0530
+Processing by UsersController#new as HTML
+  Rendered users/_error_message.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 152ms (Views: 150.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-08-09 08:51:21 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rprPjRX/OseWICzZKuqegYvWpzk/yPExtXdaFgE5N1OoD3M7PC5w1WUHJ2QO6O9KiJduyoAxMKMIEQO9+LBbmA==", "user"=>{"name"=>"Example-1", "email"=>"multiimage@gmail.com", "password"=>"[FILTERED]", "photo"=>[#<ActionDispatch::Http::UploadedFile:0x007fe7db4c2708 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-6840-1rewjh0.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007fe7db4c2460 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-6840-uadly8.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'multiimage@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Example-1"], ["email", "multiimage@gmail.com"], ["password", "multiimage"], ["created_at", "2015-08-09 03:21:21.560466"], ["updated_at", "2015-08-09 03:21:21.560466"]]
+  [1m[36m (248.6ms)[0m  [1mcommit transaction[0m
+Command :: file -b --mime '/tmp/2d2c1e99927200267c7f645c1490e74620150809-6840-p0gjb9.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2d2c1e99927200267c7f645c1490e74620150809-6840-a9035v.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2d2c1e99927200267c7f645c1490e74620150809-6840-a9035v.png[0]'
+Command :: convert '/tmp/2d2c1e99927200267c7f645c1490e74620150809-6840-a9035v.png[0]' -auto-orient -resize "300x300>" '/tmp/6679b97ee6d5b9a3bf3de8e7fd36676f20150809-6840-mo3jvy'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2d2c1e99927200267c7f645c1490e74620150809-6840-a9035v.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2d2c1e99927200267c7f645c1490e74620150809-6840-a9035v.png[0]'
+Command :: convert '/tmp/2d2c1e99927200267c7f645c1490e74620150809-6840-a9035v.png[0]' -auto-orient -resize "100x100>" '/tmp/6679b97ee6d5b9a3bf3de8e7fd36676f20150809-6840-1hhc8ta'
+  [1m[35m (0.1ms)[0m  begin transaction
+Command :: file -b --mime '/tmp/2d2c1e99927200267c7f645c1490e74620150809-6840-1r3lj0w.png'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "images" ("photo_file_name", "photo_content_type", "photo_file_size", "photo_updated_at", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["photo_file_name", "10501835_737529199621691_5974029468167277643_n.png"], ["photo_content_type", "image/png"], ["photo_file_size", 281225], ["photo_updated_at", "2015-08-09 03:21:21.816571"], ["user_id", 7], ["created_at", "2015-08-09 03:21:22.904639"], ["updated_at", "2015-08-09 03:21:22.904639"]]
+  [1m[35m (146.8ms)[0m  commit transaction
+Command :: file -b --mime '/tmp/95a79089bdea948896047848c27cf22320150809-6840-y8pjsz.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/95a79089bdea948896047848c27cf22320150809-6840-o612dy.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/95a79089bdea948896047848c27cf22320150809-6840-o612dy.jpg[0]'
+Command :: convert '/tmp/95a79089bdea948896047848c27cf22320150809-6840-o612dy.jpg[0]' -auto-orient -resize "300x300>" '/tmp/497ec6167bd2208d3e128291f8f5494020150809-6840-zd7poq'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/95a79089bdea948896047848c27cf22320150809-6840-o612dy.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/95a79089bdea948896047848c27cf22320150809-6840-o612dy.jpg[0]'
+Command :: convert '/tmp/95a79089bdea948896047848c27cf22320150809-6840-o612dy.jpg[0]' -auto-orient -resize "100x100>" '/tmp/497ec6167bd2208d3e128291f8f5494020150809-6840-1ii7j26'
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/tmp/95a79089bdea948896047848c27cf22320150809-6840-1adozpe.jpg'
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "images" ("photo_file_name", "photo_content_type", "photo_file_size", "photo_updated_at", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["photo_file_name", "i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg"], ["photo_content_type", "image/jpeg"], ["photo_file_size", 156034], ["photo_updated_at", "2015-08-09 03:21:23.085335"], ["user_id", 7], ["created_at", "2015-08-09 03:21:23.410301"], ["updated_at", "2015-08-09 03:21:23.410301"]]
+  [1m[36m (138.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 2088ms (ActiveRecord: 536.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-09 08:51:23 +0530
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" LIMIT 5 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mImage Load (0.2ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 183ms (Views: 180.1ms | ActiveRecord: 1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "images" WHERE "images"."user_id" = ?[0m  [["user_id", 7]]
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-09 09:02:27 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 2]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 4]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 163ms (Views: 156.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-08-09 09:03:53 +0530
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" LIMIT 5 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mImage Load (0.2ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 262ms (Views: 258.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2015-08-09 09:03:55 +0530
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" LIMIT 5 OFFSET 5[0m
+  [1m[35mImage Load (0.2ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 6]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 7]]
+  Rendered users/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 259ms (Views: 256.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users?page=1" for 127.0.0.1 at 2015-08-09 09:03:57 +0530
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" LIMIT 5 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mImage Load (0.2ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT  "images".* FROM "images" WHERE "images"."user_id" = ? LIMIT 1  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 251ms (Views: 248.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-08-09 09:04:16 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 235ms (Views: 230.3ms | ActiveRecord: 0.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveColumnFromImage (20150809033508)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TEMPORARY TABLE "aimages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "photo_file_name" varchar, "photo_content_type" varchar, "photo_file_size" integer, "photo_updated_at" datetime, "user_id" integer) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_images_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_images_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_aimages_on_user_id" ON "aimages" ("user_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "images"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aimages" ("id","created_at","updated_at","photo_file_name","photo_content_type","photo_file_size","photo_updated_at","user_id") VALUES (1, '2015-08-08 06:52:41.838553', '2015-08-08 06:52:41.838553', '10501835_737529199621691_5974029468167277643_n.png', 'image/png', 281225, '2015-08-08 06:52:41.513007', 5)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aimages" ("id","created_at","updated_at","photo_file_name","photo_content_type","photo_file_size","photo_updated_at","user_id") VALUES (2, '2015-08-08 06:56:46.536251', '2015-08-08 06:56:46.536251', 'i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg', 'image/jpeg', 156034, '2015-08-08 06:56:46.330182', 6)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aimages" ("id","created_at","updated_at","photo_file_name","photo_content_type","photo_file_size","photo_updated_at","user_id") VALUES (3, '2015-08-09 03:21:22.904639', '2015-08-09 03:21:22.904639', '10501835_737529199621691_5974029468167277643_n.png', 'image/png', 281225, '2015-08-09 03:21:21.816571', 7)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aimages" ("id","created_at","updated_at","photo_file_name","photo_content_type","photo_file_size","photo_updated_at","user_id") VALUES (4, '2015-08-09 03:21:23.410301', '2015-08-09 03:21:23.410301', 'i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg', 'image/jpeg', 156034, '2015-08-09 03:21:23.085335', 7)[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "images"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "images" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "photo_file_name" varchar, "photo_content_type" varchar, "photo_file_size" integer, "photo_updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aimages_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aimages_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aimages"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "images" ("id","created_at","updated_at","photo_file_name","photo_content_type","photo_file_size","photo_updated_at") VALUES (1, '2015-08-08 06:52:41.838553', '2015-08-08 06:52:41.838553', '10501835_737529199621691_5974029468167277643_n.png', 'image/png', 281225, '2015-08-08 06:52:41.513007')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "images" ("id","created_at","updated_at","photo_file_name","photo_content_type","photo_file_size","photo_updated_at") VALUES (2, '2015-08-08 06:56:46.536251', '2015-08-08 06:56:46.536251', 'i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg', 'image/jpeg', 156034, '2015-08-08 06:56:46.330182')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "images" ("id","created_at","updated_at","photo_file_name","photo_content_type","photo_file_size","photo_updated_at") VALUES (3, '2015-08-09 03:21:22.904639', '2015-08-09 03:21:22.904639', '10501835_737529199621691_5974029468167277643_n.png', 'image/png', 281225, '2015-08-09 03:21:21.816571')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "images" ("id","created_at","updated_at","photo_file_name","photo_content_type","photo_file_size","photo_updated_at") VALUES (4, '2015-08-09 03:21:23.410301', '2015-08-09 03:21:23.410301', 'i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg', 'image/jpeg', 156034, '2015-08-09 03:21:23.085335')[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "aimages"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150809033508"]]
+  [1m[35m (128.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddColumnToImage (20150809033549)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "images" ADD "entity_id" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "images" ADD "entity_type" varchar
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150809033549"]]
+  [1m[35m (135.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-08-09 09:09:05 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 508ms (Views: 485.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-08-09 09:10:15 +0530
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 137ms (Views: 135.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-08-09 09:11:28 +0530
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ayj49zudUrsAD5eqDPDEz4ZnRg164u4gkYNPWrCbWKIFvURBEkwYqfMonBco8rUEhSaP/sUbL7Is5RbxSRI0aQ==", "product"=>{"name"=>"Multi Image", "brand_name"=>"Multi", "price"=>"30000", "image"=>{"photo"=>[#<ActionDispatch::Http::UploadedFile:0x007f7da63c54a8 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-7721-iwvzcf.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f7da63c5430 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-7721-4okk4a.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f7da63c53b8 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-7721-1agxs2z.jpeg>, @original_filename="IMG_154387006730197.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"IMG_154387006730197.jpeg\"\r\nContent-Type: image/jpeg\r\n">]}}, "commit"=>"Create Product"}
+  [1m[35m (1.8ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "products" ("name", "brand_name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Multi Image"], ["brand_name", "Multi"], ["price", "30000"], ["created_at", "2015-08-09 03:42:50.225621"], ["updated_at", "2015-08-09 03:42:50.225621"]]
+  [1m[35m (137.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/products
+Completed 302 Found in 81603ms (ActiveRecord: 155.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-08-09 09:12:50 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (2.1ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 1736ms (Views: 1713.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-08-09 09:14:53 +0530
+
+SyntaxError (/home/akshay/index/app/controllers/products_controller.rb:15: syntax error, unexpected ':', expecting '}'
+      Image.create():photo=>img, :entity_type=>@pr...
+                     ^
+/home/akshay/index/app/controllers/products_controller.rb:15: syntax error, unexpected =>, expecting :: or '[' or '.'
+...te():photo=>img, :entity_type=>@product.class.downcase, :ent...
+...                               ^
+/home/akshay/index/app/controllers/products_controller.rb:15: syntax error, unexpected =>, expecting :: or '[' or '.'
+...ct.class.downcase, :entity_id=>@product.id)
+...                               ^
+/home/akshay/index/app/controllers/products_controller.rb:15: syntax error, unexpected ')', expecting '}'
+/home/akshay/index/app/controllers/products_controller.rb:19: syntax error, unexpected keyword_else, expecting '}'
+/home/akshay/index/app/controllers/products_controller.rb:21: syntax error, unexpected keyword_end, expecting '}'
+/home/akshay/index/app/controllers/products_controller.rb:32: syntax error, unexpected keyword_end, expecting '}'):
+  app/controllers/products_controller.rb:15: syntax error, unexpected ':', expecting '}'
+  app/controllers/products_controller.rb:15: syntax error, unexpected =>, expecting :: or '[' or '.'
+  app/controllers/products_controller.rb:15: syntax error, unexpected =>, expecting :: or '[' or '.'
+  app/controllers/products_controller.rb:15: syntax error, unexpected ')', expecting '}'
+  app/controllers/products_controller.rb:19: syntax error, unexpected keyword_else, expecting '}'
+  app/controllers/products_controller.rb:21: syntax error, unexpected keyword_end, expecting '}'
+  app/controllers/products_controller.rb:32: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (462.9ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (126.8ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (35.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (695.0ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (5.1ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (5.1ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (3.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (6.1ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (146.1ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (4.3ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.3ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (277.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-08-09 09:15:13 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.1ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (72.4ms)
+Completed 200 OK in 1692ms (Views: 1640.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-08-09 09:15:49 +0530
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (62.9ms)
+Completed 200 OK in 1807ms (Views: 1734.4ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-08-09 09:16:07 +0530
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8yfhr30mqFB+zO1Nvh9f4SklPbD2supkEny4HxU9ejD1sl0ZVPfiQo3r5vCaHS4qKmT0Q0lLK/avGuG07LQW+w==", "product"=>{"name"=>"Multi Image-2", "brand_name"=>"Multi", "price"=>"30000", "image"=>{"photo"=>[#<ActionDispatch::Http::UploadedFile:0x007f7da65db558 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-7721-14pe9u9.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f7da65d8768 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-7721-stmkk8.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f7da65d5b08 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-7721-1e3xhl9.jpeg>, @original_filename="IMG_154387006730197.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"IMG_154387006730197.jpeg\"\r\nContent-Type: image/jpeg\r\n">]}}, "commit"=>"Create Product"}
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "products" ("name", "brand_name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Multi Image-2"], ["brand_name", "Multi"], ["price", "30000"], ["created_at", "2015-08-09 03:46:07.701199"], ["updated_at", "2015-08-09 03:46:07.701199"]]
+  [1m[36m (184.4ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 260ms (ActiveRecord: 186.0ms)
+
+NoMethodError (undefined method `downcase' for #<Class:0x007f7da64e7840>):
+  app/controllers/products_controller.rb:16:in `block in create'
+  app/controllers/products_controller.rb:15:in `map'
+  app/controllers/products_controller.rb:15:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (228.6ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (75.1ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (19.0ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (388.2ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f7db6d22658 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f7db6d22388 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f7db5b86458 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/products" for 127.0.0.1 at 2015-08-09 09:16:35 +0530
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8yfhr30mqFB+zO1Nvh9f4SklPbD2supkEny4HxU9ejD1sl0ZVPfiQo3r5vCaHS4qKmT0Q0lLK/avGuG07LQW+w==", "product"=>{"name"=>"Multi Image-2", "brand_name"=>"Multi", "price"=>"30000", "image"=>{"photo"=>[#<ActionDispatch::Http::UploadedFile:0x007f7da587e360 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-7721-e45rib.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f7da5877830 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-7721-1pduia1.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f7da5874a68 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-7721-1yp1u1k.jpeg>, @original_filename="IMG_154387006730197.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"IMG_154387006730197.jpeg\"\r\nContent-Type: image/jpeg\r\n">]}}, "commit"=>"Create Product"}
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "products" ("name", "brand_name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Multi Image-2"], ["brand_name", "Multi"], ["price", "30000"], ["created_at", "2015-08-09 03:46:36.072639"], ["updated_at", "2015-08-09 03:46:36.072639"]]
+  [1m[35m (136.4ms)[0m  commit transaction
+Completed 500 Internal Server Error in 56152ms (ActiveRecord: 142.6ms)
+
+SystemExit (exit):
+  app/controllers/products_controller.rb:15:in `exit'
+  app/controllers/products_controller.rb:15:in `create'
+  app/controllers/products_controller.rb:15:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (307.2ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (71.3ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (460.4ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f7db6d22658 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f7db6d22388 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f7db5b86458 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-08-09 09:17:44 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (53.4ms)
+Completed 200 OK in 604ms (Views: 573.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-08-09 09:18:00 +0530
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LblCQPHRyMYFfk8AYHCU4WeM25d4uEmH7F79Umc/fGArLP722ACC1PZZRL1EcuUqZM0SZMdBiBVROKT5nrYQqw==", "product"=>{"name"=>"Multi Image-3", "brand_name"=>"Multi", "price"=>"30000", "image"=>{"photo"=>[#<ActionDispatch::Http::UploadedFile:0x007f2212177d30 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-19das4f.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f2212177cb8 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-1fwqt0m.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f2212177c40 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-f0abmr.jpeg>, @original_filename="IMG_154387006730197.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"IMG_154387006730197.jpeg\"\r\nContent-Type: image/jpeg\r\n">]}}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "products" ("name", "brand_name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Multi Image-3"], ["brand_name", "Multi"], ["price", "30000"], ["created_at", "2015-08-09 03:48:00.128964"], ["updated_at", "2015-08-09 03:48:00.128964"]]
+  [1m[35m (150.4ms)[0m  commit transaction
+Completed 500 Internal Server Error in 173ms (ActiveRecord: 151.4ms)
+
+Paperclip::AdapterRegistry::NoHandlerError (No handler found for ["photo", [#<ActionDispatch::Http::UploadedFile:0x007f2212177d30 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-19das4f.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f2212177cb8 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-1fwqt0m.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f2212177c40 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-f0abmr.jpeg>, @original_filename="IMG_154387006730197.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"IMG_154387006730197.jpeg\"\r\nContent-Type: image/jpeg\r\n">]]):
+  app/controllers/products_controller.rb:15:in `block in create'
+  app/controllers/products_controller.rb:14:in `map'
+  app/controllers/products_controller.rb:14:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.0ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f22226f7200 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f22226f6f30 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f222156ba90 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/products" for 127.0.0.1 at 2015-08-09 09:18:27 +0530
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LblCQPHRyMYFfk8AYHCU4WeM25d4uEmH7F79Umc/fGArLP722ACC1PZZRL1EcuUqZM0SZMdBiBVROKT5nrYQqw==", "product"=>{"name"=>"Multi Image-3", "brand_name"=>"Multi", "price"=>"30000", "image"=>{"photo"=>[#<ActionDispatch::Http::UploadedFile:0x007f22128a0cb0 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-mu2kw3.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f22128a0c38 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-nliu8r.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f22128a0bc0 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-7gy1rm.jpeg>, @original_filename="IMG_154387006730197.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"IMG_154387006730197.jpeg\"\r\nContent-Type: image/jpeg\r\n">]}}, "commit"=>"Create Product"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "products" ("name", "brand_name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Multi Image-3"], ["brand_name", "Multi"], ["price", "30000"], ["created_at", "2015-08-09 03:48:27.877091"], ["updated_at", "2015-08-09 03:48:27.877091"]]
+  [1m[36m (208.1ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 208.5ms)
+
+Paperclip::AdapterRegistry::NoHandlerError (No handler found for ["photo", [#<ActionDispatch::Http::UploadedFile:0x007f22128a0cb0 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-mu2kw3.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f22128a0c38 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-nliu8r.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f22128a0bc0 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-7gy1rm.jpeg>, @original_filename="IMG_154387006730197.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"IMG_154387006730197.jpeg\"\r\nContent-Type: image/jpeg\r\n">]]):
+  app/controllers/products_controller.rb:15:in `block in create'
+  app/controllers/products_controller.rb:14:in `map'
+  app/controllers/products_controller.rb:14:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f22226f7200 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f22226f6f30 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f222156ba90 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/products" for 127.0.0.1 at 2015-08-09 09:18:43 +0530
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LblCQPHRyMYFfk8AYHCU4WeM25d4uEmH7F79Umc/fGArLP722ACC1PZZRL1EcuUqZM0SZMdBiBVROKT5nrYQqw==", "product"=>{"name"=>"Multi Image-3", "brand_name"=>"Multi", "price"=>"30000", "image"=>{"photo"=>[#<ActionDispatch::Http::UploadedFile:0x007f2212d0f5f8 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-1unvaoy.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f2212d0f580 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-lohaux.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f2212d0f508 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8124-w4wkjy.jpeg>, @original_filename="IMG_154387006730197.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"IMG_154387006730197.jpeg\"\r\nContent-Type: image/jpeg\r\n">]}}, "commit"=>"Create Product"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "products" ("name", "brand_name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Multi Image-3"], ["brand_name", "Multi"], ["price", "30000"], ["created_at", "2015-08-09 03:48:43.599221"], ["updated_at", "2015-08-09 03:48:43.599221"]]
+  [1m[35m (171.7ms)[0m  commit transaction
+Completed 500 Internal Server Error in 19348ms (ActiveRecord: 173.2ms)
+
+SystemExit (exit):
+  app/controllers/products_controller.rb:16:in `exit'
+  app/controllers/products_controller.rb:16:in `block in create'
+  app/controllers/products_controller.rb:16:in `block in create'
+  app/controllers/products_controller.rb:14:in `map'
+  app/controllers/products_controller.rb:14:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (318.5ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (67.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.4ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (455.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f22226f7200 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f22226f6f30 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f222156ba90 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-08-09 09:19:31 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 651ms (Views: 627.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-08-09 09:19:38 +0530
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HSSwP+qohlgTCGprNpWqNkO4Ca062kPb5NopTpIpsUobsQyJw3nMSuAvYdYSl9v9QPnAXoUjgklZvHDla6DdgQ==", "product"=>{"name"=>"", "brand_name"=>"", "price"=>"", "image"=>{"photo"=>[#<ActionDispatch::Http::UploadedFile:0x007f1ece41e300 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8238-1bf5uoh.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f1ece41e288 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8238-1ouiosn.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">]}}, "commit"=>"Create Product"}
+  [1m[35m (2.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "products" ("name", "brand_name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", ""], ["brand_name", ""], ["price", ""], ["created_at", "2015-08-09 03:50:17.741964"], ["updated_at", "2015-08-09 03:50:17.741964"]]
+  [1m[35m (138.4ms)[0m  commit transaction
+Completed 500 Internal Server Error in 39027ms (ActiveRecord: 145.3ms)
+
+Paperclip::AdapterRegistry::NoHandlerError (No handler found for ["photo", [#<ActionDispatch::Http::UploadedFile:0x007f1ece41e300 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8238-1bf5uoh.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f1ece41e288 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8238-1ouiosn.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">]]):
+  app/controllers/products_controller.rb:16:in `block in create'
+  app/controllers/products_controller.rb:15:in `map'
+  app/controllers/products_controller.rb:15:in `create'
+
+
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (280.7ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (67.0ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (23.3ms)
+  Rendered /home/akshay/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (420.4ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f1edfa863d0 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f1edfa86100 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f1ede8e94b0 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/products/new" for 127.0.0.1 at 2015-08-09 09:20:41 +0530
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 1622ms (Views: 1525.6ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2015-08-09 09:21:01 +0530
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PqmrWbLsOIYy6isiD3gkilWPvyZARkk71alKam5mAOM4PBfvmz1ylMHNIJ8relVBVs521f+/iKlozxPBl+9sKA==", "product"=>{"name"=>"Multi Image-4", "brand_name"=>"Multi", "price"=>"30000", "image"=>{"photo"=>[#<ActionDispatch::Http::UploadedFile:0x007f1ecd88a200 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8238-1gd7b2t.png>, @original_filename="10501835_737529199621691_5974029468167277643_n.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"10501835_737529199621691_5974029468167277643_n.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f1ecd87b6d8 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8238-6du1cd.jpg>, @original_filename="i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f1ecd878c08 @tempfile=#<Tempfile:/tmp/RackMultipart20150809-8238-yeox2c.jpeg>, @original_filename="IMG_154387006730197.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image][photo][]\"; filename=\"IMG_154387006730197.jpeg\"\r\nContent-Type: image/jpeg\r\n">]}}, "commit"=>"Create Product"}
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "products" ("name", "brand_name", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Multi Image-4"], ["brand_name", "Multi"], ["price", "30000"], ["created_at", "2015-08-09 03:51:01.982174"], ["updated_at", "2015-08-09 03:51:01.982174"]]
+  [1m[36m (145.5ms)[0m  [1mcommit transaction[0m
+Command :: file -b --mime '/tmp/2d2c1e99927200267c7f645c1490e74620150809-8238-11ch15r.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2d2c1e99927200267c7f645c1490e74620150809-8238-1bpwmhs.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2d2c1e99927200267c7f645c1490e74620150809-8238-1bpwmhs.png[0]'
+Command :: convert '/tmp/2d2c1e99927200267c7f645c1490e74620150809-8238-1bpwmhs.png[0]' -auto-orient -resize "300x300>" '/tmp/52656c537ef375c2ae3809aaa348a33220150809-8238-1w0wm1l'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/2d2c1e99927200267c7f645c1490e74620150809-8238-1bpwmhs.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/2d2c1e99927200267c7f645c1490e74620150809-8238-1bpwmhs.png[0]'
+Command :: convert '/tmp/2d2c1e99927200267c7f645c1490e74620150809-8238-1bpwmhs.png[0]' -auto-orient -resize "100x100>" '/tmp/52656c537ef375c2ae3809aaa348a33220150809-8238-1cfjwmw'
+  [1m[35m (0.5ms)[0m  begin transaction
+Command :: file -b --mime '/tmp/2d2c1e99927200267c7f645c1490e74620150809-8238-11091gw.png'
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "images" ("photo_file_name", "photo_content_type", "photo_file_size", "photo_updated_at", "entity_type", "entity_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["photo_file_name", "10501835_737529199621691_5974029468167277643_n.png"], ["photo_content_type", "image/png"], ["photo_file_size", 281225], ["photo_updated_at", "2015-08-09 03:51:02.261582"], ["entity_type", "Product"], ["entity_id", 12], ["created_at", "2015-08-09 03:51:02.751596"], ["updated_at", "2015-08-09 03:51:02.751596"]]
+  [1m[35m (144.9ms)[0m  commit transaction
+Command :: file -b --mime '/tmp/95a79089bdea948896047848c27cf22320150809-8238-1s63d9x.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/95a79089bdea948896047848c27cf22320150809-8238-6g8iwj.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/95a79089bdea948896047848c27cf22320150809-8238-6g8iwj.jpg[0]'
+Command :: convert '/tmp/95a79089bdea948896047848c27cf22320150809-8238-6g8iwj.jpg[0]' -auto-orient -resize "300x300>" '/tmp/7d6789292f2fa54f87a186c795c0405a20150809-8238-12xv2c'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/95a79089bdea948896047848c27cf22320150809-8238-6g8iwj.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/95a79089bdea948896047848c27cf22320150809-8238-6g8iwj.jpg[0]'
+Command :: convert '/tmp/95a79089bdea948896047848c27cf22320150809-8238-6g8iwj.jpg[0]' -auto-orient -resize "100x100>" '/tmp/7d6789292f2fa54f87a186c795c0405a20150809-8238-6v2l7z'
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/tmp/95a79089bdea948896047848c27cf22320150809-8238-x19pek.jpg'
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "images" ("photo_file_name", "photo_content_type", "photo_file_size", "photo_updated_at", "entity_type", "entity_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["photo_file_name", "i_ll_be_stronger_than_anyone__sabo_minimalist_by_annahiwatari-d7ayjtv.png.jpg"], ["photo_content_type", "image/jpeg"], ["photo_file_size", 156034], ["photo_updated_at", "2015-08-09 03:51:03.110182"], ["entity_type", "Product"], ["entity_id", 12], ["created_at", "2015-08-09 03:51:03.587080"], ["updated_at", "2015-08-09 03:51:03.587080"]]
+  [1m[36m (155.7ms)[0m  [1mcommit transaction[0m
+Command :: file -b --mime '/tmp/b08fb29001d81edc2d9c2743dbbb5e6220150809-8238-15vsmfg.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/b08fb29001d81edc2d9c2743dbbb5e6220150809-8238-qtbauz.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/b08fb29001d81edc2d9c2743dbbb5e6220150809-8238-qtbauz.jpeg[0]'
+Command :: convert '/tmp/b08fb29001d81edc2d9c2743dbbb5e6220150809-8238-qtbauz.jpeg[0]' -auto-orient -resize "300x300>" '/tmp/15944854f4be151f1c20ab6ff54eea4920150809-8238-16lyxzs'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/b08fb29001d81edc2d9c2743dbbb5e6220150809-8238-qtbauz.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/b08fb29001d81edc2d9c2743dbbb5e6220150809-8238-qtbauz.jpeg[0]'
+Command :: convert '/tmp/b08fb29001d81edc2d9c2743dbbb5e6220150809-8238-qtbauz.jpeg[0]' -auto-orient -resize "100x100>" '/tmp/15944854f4be151f1c20ab6ff54eea4920150809-8238-l9us76'
+  [1m[35m (0.9ms)[0m  begin transaction
+Command :: file -b --mime '/tmp/b08fb29001d81edc2d9c2743dbbb5e6220150809-8238-1q2zun.jpeg'
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "images" ("photo_file_name", "photo_content_type", "photo_file_size", "photo_updated_at", "entity_type", "entity_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["photo_file_name", "IMG_154387006730197.jpeg"], ["photo_content_type", "image/jpeg"], ["photo_file_size", 246625], ["photo_updated_at", "2015-08-09 03:51:03.947829"], ["entity_type", "Product"], ["entity_id", 12], ["created_at", "2015-08-09 03:51:04.627758"], ["updated_at", "2015-08-09 03:51:04.627758"]]
+  [1m[35m (122.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/products
+Completed 302 Found in 3142ms (ActiveRecord: 579.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-08-09 09:21:05 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 1676ms (Views: 1669.0ms | ActiveRecord: 1.2ms)
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."name" = ? LIMIT 1[0m  [["name", "Multi Image-4"]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."name" = ? LIMIT 1  [["name", "Multi Image-4"]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."name" = ? LIMIT 1[0m  [["name", "Multi Image-4"]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 12], ["entity_type", "Product"]]
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."name" = ? LIMIT 1[0m  [["name", "Multi Image-4"]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 12]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mImage Load (0.8ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 12], ["entity_type", "Product"]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 12], ["entity_type", "Product"]]
+
+
+Started GET "/products" for 127.0.0.1 at 2015-08-09 09:24:26 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (4.6ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mImage Load (1.9ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 1], ["entity_type", "Product"]]
+  [1m[35mImage Load (1.7ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 2], ["entity_type", "Product"]]
+  [1m[36mImage Load (1.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 3], ["entity_type", "Product"]]
+  [1m[35mImage Load (1.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 4], ["entity_type", "Product"]]
+  [1m[36mImage Load (1.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 5], ["entity_type", "Product"]]
+  [1m[35mImage Load (1.0ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 6], ["entity_type", "Product"]]
+  [1m[36mImage Load (1.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 7], ["entity_type", "Product"]]
+  [1m[35mImage Load (1.7ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 8], ["entity_type", "Product"]]
+  [1m[36mImage Load (1.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 9], ["entity_type", "Product"]]
+  [1m[35mImage Load (1.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 10], ["entity_type", "Product"]]
+  [1m[36mImage Load (1.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 11], ["entity_type", "Product"]]
+  [1m[35mImage Load (1.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 12], ["entity_type", "Product"]]
+  Rendered products/index.html.erb within layouts/application (810.7ms)
+Completed 200 OK in 4567ms (Views: 4495.2ms | ActiveRecord: 31.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-08-09 09:25:06 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.9ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 1], ["entity_type", "Product"]]
+  [1m[36mImage Load (0.5ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 2], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 3], ["entity_type", "Product"]]
+  [1m[36mImage Load (11.5ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 4], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 5], ["entity_type", "Product"]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 6], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 7], ["entity_type", "Product"]]
+  [1m[36mImage Load (0.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 8], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 9], ["entity_type", "Product"]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 10], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.9ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 11], ["entity_type", "Product"]]
+  [1m[36mImage Load (0.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 12], ["entity_type", "Product"]]
+  Rendered products/index.html.erb within layouts/application (196.8ms)
+Completed 200 OK in 1538ms (Views: 1514.5ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-08-09 09:27:29 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.1ms)[0m  SELECT "products".* FROM "products"
+  [1m[36mImage Load (0.5ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 1], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 2], ["entity_type", "Product"]]
+  [1m[36mImage Load (0.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 3], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 4], ["entity_type", "Product"]]
+  [1m[36mImage Load (1.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 5], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 6], ["entity_type", "Product"]]
+  [1m[36mImage Load (0.7ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 7], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 8], ["entity_type", "Product"]]
+  [1m[36mImage Load (0.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 9], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 10], ["entity_type", "Product"]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 11], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.7ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 12], ["entity_type", "Product"]]
+  Rendered products/index.html.erb within layouts/application (203.9ms)
+Completed 200 OK in 1547ms (Views: 1525.2ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-08-09 09:27:51 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 1], ["entity_type", "Product"]]
+  [1m[36mImage Load (1.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 2], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 3], ["entity_type", "Product"]]
+  [1m[36mImage Load (0.5ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 4], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 5], ["entity_type", "Product"]]
+  [1m[36mImage Load (0.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 6], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 7], ["entity_type", "Product"]]
+  [1m[36mImage Load (0.6ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 8], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 9], ["entity_type", "Product"]]
+  [1m[36mImage Load (0.7ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 10], ["entity_type", "Product"]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?  [["entity_id", 11], ["entity_type", "Product"]]
+  [1m[36mImage Load (0.7ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."entity_id" = ? AND "images"."entity_type" = ?[0m  [["entity_id", 12], ["entity_type", "Product"]]
+  Rendered products/index.html.erb within layouts/application (246.4ms)
+Completed 200 OK in 1924ms (Views: 1910.3ms | ActiveRecord: 8.6ms)
