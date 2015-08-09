@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'users/login_page'
+   put 'users/allow_login'
+   get "users/destroy_session"
   resources :users
 
 
@@ -8,7 +10,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'users#new'
+   root 'users#login_page'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

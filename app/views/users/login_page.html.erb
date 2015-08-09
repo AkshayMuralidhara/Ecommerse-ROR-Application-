@@ -1,5 +1,21 @@
+<%= render "error_message"%>
 <table>
-	<tr>
-		<td><%  %></td>
-	</tr>
+<%= form_for([@user], :url => {:controller=>"users",  :action=>"allow_login"}, method: :put) do |f| %>
+<tr>
+<td><%= f.label :email%></td>
+<td><%= f.text_field :email%></td>
+</tr>
+<tr>
+<td><%= f.label :password%></td>
+<td><%= f.password_field :password%></td>
+</tr>
+<tr>
+
+<tr>
+	<td><%= f.submit "Login"%></td>	
+
+<%end%>
+
+<td><%= link_to "Sign up", :controller=>"users", :action=>"new"%></td>
+</tr>
 </table>

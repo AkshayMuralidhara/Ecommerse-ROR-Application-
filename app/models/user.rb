@@ -4,4 +4,12 @@ class User < ActiveRecord::Base
 	validates :password, :presence =>true
 	has_one :image
 	accepts_nested_attributes_for :image
+	def self.validate_creadiantial(email, password)
+	@user=User.where(:email=>email, :password=>password)
+	if !@user.blank?
+       @user.first
+    else
+   	   nil
+	end
+	end
 end
