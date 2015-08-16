@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'users/login_page'
+   get 'users/login_page'
    put 'users/allow_login'
    get "users/destroy_session"
   resources :users
